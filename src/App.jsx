@@ -270,7 +270,7 @@ export default function MedicalStudySuite() {
     const tabConfig = TABS.find(t => t.id === tab);
 
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      const response = await fetch("/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "text/event-stream" },
         signal: abortRef.current.signal,
